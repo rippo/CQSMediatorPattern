@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Cqs.Mediator.Pattern.Mvc.Commands;
+using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
 
 namespace Cqs.Mediator.Pattern.Mvc.Controllers
 {

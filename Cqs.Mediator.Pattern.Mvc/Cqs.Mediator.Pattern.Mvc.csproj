@@ -131,21 +131,30 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Container.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\BaseController.cs" />
-    <Compile Include="Commands\ICommandHandler.cs" />
+    <Compile Include="Handlers\SiteMap\SitemapGenerator.cs" />
+    <Compile Include="Handlers\SiteMap\ISitemapGenerator.cs" />
+    <Compile Include="Models\SiteMap\SitemapChangeFrequency.cs" />
+    <Compile Include="Models\SiteMap\ISitemapItem.cs" />
+    <Compile Include="Helpers\ActionResult\SitemapResult.cs" />
+    <Compile Include="Models\SiteMap\SitemapItem.cs" />
+    <Compile Include="Helpers\Url\UrlHelperExtensions.cs" />
+    <Compile Include="Handlers\Commands\ICommandHandler.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Commands\MoveCustomerCommand.cs" />
-    <Compile Include="Commands\MoveCustomerCommandHandler.cs" />
+    <Compile Include="Handlers\Commands\MoveCustomerCommand.cs" />
+    <Compile Include="Handlers\Commands\MoveCustomerCommandHandler.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\Repository\UserRepository.cs" />
+    <Compile Include="Handlers\Repository\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

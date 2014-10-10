@@ -1,4 +1,4 @@
-namespace Cqs.Mediator.Pattern.Mvc.Commands
+namespace Cqs.Mediator.Pattern.Mvc.Handlers.Commands
 {
     public interface ICommandHandler<TCommand>
     {
