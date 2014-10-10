@@ -22,6 +22,12 @@ namespace Cqs.Mediator.Pattern.Mvc
                 new { controller = "Home", action = "Contact" }
             );
 
+            routes.MapRoute(
+                "test",
+                "test",
+                new { controller = "Home", action = "Test" }
+            );
+
             //controller routes, need to define them...
             routes.MapRoute(
                 "Login",
