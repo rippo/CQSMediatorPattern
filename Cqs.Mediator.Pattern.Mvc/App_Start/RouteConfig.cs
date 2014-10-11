@@ -34,6 +34,11 @@ namespace Cqs.Mediator.Pattern.Mvc
                 "Login/{action}/{id}",
                 new { controller = "Login", action = "Index", id = "" }
             );
+            routes.MapRoute(
+                "Customer",
+                "Customer/{action}/{id}",
+                new { controller = "Customer", action = "Index", id = "" }
+            );
             //... if you have other controller, specify the name here
 
 

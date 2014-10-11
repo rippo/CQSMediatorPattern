@@ -6,8 +6,7 @@
         public virtual void Handle(MoveCustomerCommand command)
         {
             //logic here
-
-            command.CustomerId = 123;
+            command.CustomerId = command.CustomerId + 1000;
         }
     }
 }

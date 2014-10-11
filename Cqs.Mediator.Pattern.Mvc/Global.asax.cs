@@ -7,8 +7,6 @@ namespace Cqs.Mediator.Pattern.Mvc
     {
         protected void Application_Start()
         {
-            //ControllerBuilder.Current.SetControllerFactory(new BlahControllerFactory());
-
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
