@@ -5,11 +5,11 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly ICommandHandler<MoveCustomerCommand> handler;
+        private readonly ICommandHandler<MoveCustomerCommand> _handler;
 
         public LoginController(ICommandHandler<MoveCustomerCommand> handler)
         {
-            this.handler = handler;
+            _handler = handler;
         }
 
         public ViewResult Index()

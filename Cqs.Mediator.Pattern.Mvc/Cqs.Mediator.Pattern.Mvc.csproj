@@ -138,6 +138,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\BaseController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Handlers\Processors\CustomerEnhanceProcessor.cs" />
+    <Compile Include="Handlers\Processors\ICustomerEnhanceProcessor.cs" />
     <Compile Include="Handlers\Commands\DeleteCustomerCommand.cs" />
     <Compile Include="Handlers\Commands\DeleteCustomerCommandHandler.cs" />
     <Compile Include="Handlers\Commands\UpdateCustomerCommand.cs" />
