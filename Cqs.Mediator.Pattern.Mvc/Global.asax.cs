@@ -10,7 +10,7 @@ namespace Cqs.Mediator.Pattern.Mvc
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Container.Setup();
+            ContainerConfig.Init();
         }
     }
 

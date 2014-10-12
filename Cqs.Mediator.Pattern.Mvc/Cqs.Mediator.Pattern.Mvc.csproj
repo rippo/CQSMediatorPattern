@@ -133,11 +133,12 @@
     <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\Container.cs" />
+    <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\BaseController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Handlers\Commands\LogCommandHandlerDecorator.cs" />
     <Compile Include="Handlers\Processors\CustomerEnhanceProcessor.cs" />
     <Compile Include="Handlers\Processors\ICustomerEnhanceProcessor.cs" />
@@ -145,6 +146,14 @@
     <Compile Include="Handlers\Commands\DeleteCustomerCommandHandler.cs" />
     <Compile Include="Handlers\Commands\UpdateCustomerCommand.cs" />
     <Compile Include="Handlers\Commands\UpdateCustomerCommandHandler.cs" />
+    <Compile Include="Handlers\Query\FindUsersBySearchTextQueryHandler.cs" />
+    <Compile Include="Models\Users\FakeUsers.cs" />
+    <Compile Include="Handlers\Query\FindUsersBySearchTextQuery.cs" />
+    <Compile Include="Handlers\Query\IQuery.cs" />
+    <Compile Include="Handlers\Query\IQueryHandler.cs" />
+    <Compile Include="Handlers\Query\IQueryProcessor.cs" />
+    <Compile Include="Handlers\Query\QueryProcessor.cs" />
+    <Compile Include="Models\Users\User.cs" />
     <Compile Include="Handlers\SiteMap\SitemapGenerator.cs" />
     <Compile Include="Handlers\SiteMap\ISitemapGenerator.cs" />
     <Compile Include="Models\SiteMap\SitemapChangeFrequency.cs" />
@@ -188,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Customer\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

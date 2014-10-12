@@ -1,0 +1,8 @@
+﻿@model List<User>
+
+<h2>Users</h2>
+
+@foreach (var user in Model)
+{
+    <li>@user.Id - @user.Name</li>
+}
