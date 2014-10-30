@@ -10,8 +10,11 @@ namespace Cqs.Mediator.Pattern.Mvc.Handlers.Query
 
         public List<User> Handle(FindUsersByNameViewModelQuery query)
         {
+            var custId = query.Security.CurrentUserId;
+
             return (from user in FakeUsers.Data()
-                    where user.Name.StartsWith(query.SearchText, StringComparison.OrdinalIgnoreCase)
+                where user.Name.StartsWith(query.SearchText, StringComparison.OrdinalIgnoreCase)
+                      && user.CustomerId == custId 
                     select user)
                 .ToList();
         }

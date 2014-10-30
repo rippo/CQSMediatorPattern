@@ -26,6 +26,7 @@ namespace Cqs.Mediator.Pattern.Mvc
 
             //Decorate each returned ICommandHandler<T> object with a LogCommandHandlerDecorator<T>. 
             Container.RegisterDecorator(typeof(ICommandHandler<>), typeof(LogCommandHandlerDecorator<>));
+            Container.RegisterDecorator(typeof(IQueryHandler<,>), typeof(SecurityHandlerDecorator<,>));
 
             //TODO register for many, or similar???
             Container.Register<ICustomerEnhanceProcessor, CustomerEnhanceProcessor>();
@@ -36,4 +37,5 @@ namespace Cqs.Mediator.Pattern.Mvc
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(Container));
         }
     }
+
 }

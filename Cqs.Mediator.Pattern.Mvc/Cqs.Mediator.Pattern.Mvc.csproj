@@ -140,6 +140,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Handlers\Commands\ICommand.cs" />
+    <Compile Include="Handlers\Query\SecurityHandlerDecorator.cs" />
     <Compile Include="Handlers\Commands\LogCommandHandlerDecorator.cs" />
     <Compile Include="Handlers\Processors\CustomerEnhanceProcessor.cs" />
     <Compile Include="Handlers\Processors\ICustomerEnhanceProcessor.cs" />

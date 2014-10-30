@@ -2,9 +2,18 @@
 {
     public class Security : ISecurity
     {
+        readonly int currentUserId;
+
+        public Security()
+        {
+            currentUserId = 999;
+        }
+
+
         public int CurrentUserId
         {
-            get { return 999; }
+            get { return currentUserId; } 
         }
+
     }
 }
