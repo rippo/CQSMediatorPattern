@@ -1,9 +1,9 @@
-using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
+using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
 
 namespace Cqs.Mediator.Pattern.Mvc.Handlers.Processors
 {
     public interface ICustomerEnhanceProcessor
     {
-        void Enhance(MoveCustomerCommand moveCommand, UpdateCustomerCommand updateCommand, DeleteCustomerCommand deleteCommand);
+        void Enhance(MoveCustomerViewModel moveViewModel, UpdateCustomerViewModel updateViewModel, DeleteCustomerViewModel deleteViewModel);
     }
 }

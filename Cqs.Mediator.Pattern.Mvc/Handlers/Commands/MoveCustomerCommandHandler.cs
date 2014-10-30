@@ -1,12 +1,14 @@
-﻿namespace Cqs.Mediator.Pattern.Mvc.Handlers.Commands
+﻿using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
+
+namespace Cqs.Mediator.Pattern.Mvc.Handlers.Commands
 {
-    public class MoveCustomerCommandHandler : ICommandHandler<MoveCustomerCommand>
+    public class MoveCustomerCommandHandler : ICommandHandler<MoveCustomerViewModel>
     {
 
-        public virtual void Handle(MoveCustomerCommand command)
+        public virtual void Handle(MoveCustomerViewModel viewModel)
         {
             //logic here
-            command.CustomerId = command.CustomerId + 1000;
+            viewModel.CustomerId = viewModel.CustomerId + 1000;
         }
     }
 }

@@ -1,27 +1,28 @@
 ﻿using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
+using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
 
 namespace Cqs.Mediator.Pattern.Mvc.Handlers.Processors
 {
     public class CustomerEnhanceProcessor : ICustomerEnhanceProcessor
     {
-        private readonly ICommandHandler<MoveCustomerCommand> _move;
-        private readonly ICommandHandler<DeleteCustomerCommand> _delete;
-        private readonly ICommandHandler<UpdateCustomerCommand> _update;
+        private readonly ICommandHandler<MoveCustomerViewModel> _move;
+        private readonly ICommandHandler<DeleteCustomerViewModel> _delete;
+        private readonly ICommandHandler<UpdateCustomerViewModel> _update;
 
-        public CustomerEnhanceProcessor(ICommandHandler<MoveCustomerCommand> move,
-            ICommandHandler<DeleteCustomerCommand> delete,
-            ICommandHandler<UpdateCustomerCommand> update)
+        public CustomerEnhanceProcessor(ICommandHandler<MoveCustomerViewModel> move,
+            ICommandHandler<DeleteCustomerViewModel> delete,
+            ICommandHandler<UpdateCustomerViewModel> update)
         {
             _move = move;
             _delete = delete;
             _update = update;
         }
 
-        public void Enhance(MoveCustomerCommand moveCommand, UpdateCustomerCommand updateCommand, DeleteCustomerCommand deleteCommand)
+        public void Enhance(MoveCustomerViewModel moveViewModel, UpdateCustomerViewModel updateViewModel, DeleteCustomerViewModel deleteViewModel)
         {
-            _move.Handle(moveCommand);
-            _update.Handle(updateCommand);
-            _delete.Handle(deleteCommand);
+            _move.Handle(moveViewModel);
+            _update.Handle(updateViewModel);
+            _delete.Handle(deleteViewModel);
         }
     }
 }

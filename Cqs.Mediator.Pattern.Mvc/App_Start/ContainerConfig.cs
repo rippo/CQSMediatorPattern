@@ -16,6 +16,8 @@ namespace Cqs.Mediator.Pattern.Mvc
         public static void Init()
         {
 
+            //Container.Register<IMediator, Mediator>();
+
             Container.RegisterManyForOpenGeneric(typeof(ICommandHandler<>), AppDomain.CurrentDomain.GetAssemblies());
             Container.RegisterManyForOpenGeneric(typeof(IQueryHandler<,>), typeof(IQueryHandler<,>).Assembly);
 

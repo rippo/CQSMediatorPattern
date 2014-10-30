@@ -1,12 +1,14 @@
+using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
+
 namespace Cqs.Mediator.Pattern.Mvc.Handlers.Commands
 {
-    public class DeleteCustomerCommandHandler : ICommandHandler<DeleteCustomerCommand>
+    public class DeleteCustomerCommandHandler : ICommandHandler<DeleteCustomerViewModel>
     {
 
-        public virtual void Handle(DeleteCustomerCommand command)
+        public virtual void Handle(DeleteCustomerViewModel viewModel)
         {
             //logic here
-            command.CustomerId = command.CustomerId + 3000;
+            viewModel.CustomerId = viewModel.CustomerId + 3000;
         }
     }
 }

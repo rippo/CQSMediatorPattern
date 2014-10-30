@@ -6,15 +6,16 @@ using Cqs.Mediator.Pattern.Mvc.Handlers.Repository;
 using Cqs.Mediator.Pattern.Mvc.Helpers.ActionResult;
 using Cqs.Mediator.Pattern.Mvc.Helpers.Url;
 using Cqs.Mediator.Pattern.Mvc.Models.SiteMap;
+using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
 
 namespace Cqs.Mediator.Pattern.Mvc.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IUserRepository _repo;
-        private readonly ICommandHandler<MoveCustomerCommand> _handler;
+        private readonly ICommandHandler<MoveCustomerViewModel> _handler;
 
-        public HomeController(IUserRepository repo, ICommandHandler<MoveCustomerCommand> handler)
+        public HomeController(IUserRepository repo, ICommandHandler<MoveCustomerViewModel> handler)
         {
             _repo = repo;
             _handler = handler;
@@ -34,7 +35,7 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
 
         public ContentResult Test()
         {
-            var command = new MoveCustomerCommand
+            var command = new MoveCustomerViewModel
             {
                 CustomerName = "My Customer"
             };

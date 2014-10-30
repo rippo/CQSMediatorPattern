@@ -16,7 +16,7 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
         {
             ViewBag.Message = "User Controller: Index";
 
-            var query = new FindUsersBySearchTextQuery
+            var query = new FindUsersByNameViewModelQuery
             {
                 SearchText = "r"
             };

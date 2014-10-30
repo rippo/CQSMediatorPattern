@@ -9,10 +9,10 @@ namespace Cqs.Mediator.Pattern.Mvc.Handlers.Commands
             this._decorated = decorated;
         }
 
-        public void Handle(TCommand command)
+        public void Handle(TCommand viewModel)
         {
             //do some logging here...
-            _decorated.Handle(command);
+            _decorated.Handle(viewModel);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
-using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
 using Cqs.Mediator.Pattern.Mvc.Handlers.Processors;
+using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
 
 namespace Cqs.Mediator.Pattern.Mvc.Controllers
 {
@@ -17,9 +17,9 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
 
         public ActionResult Index()
         {
-            var c1 = new MoveCustomerCommand { CustomerId = 456, CustomerName = "Test"};
-            var c2 = new UpdateCustomerCommand { CustomerId = 678 };
-            var c3 = new DeleteCustomerCommand { CustomerId = 987 };
+            var c1 = new MoveCustomerViewModel { CustomerId = 456, CustomerName = "Test"};
+            var c2 = new UpdateCustomerViewModel { CustomerId = 678 };
+            var c3 = new DeleteCustomerViewModel { CustomerId = 987 };
 
             _enhanceProcessor.Enhance(c1, c2, c3);
 
