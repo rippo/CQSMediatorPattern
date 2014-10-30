@@ -5,6 +5,7 @@ using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
 using Cqs.Mediator.Pattern.Mvc.Handlers.Repository;
 using Cqs.Mediator.Pattern.Mvc.Helpers.ActionResult;
 using Cqs.Mediator.Pattern.Mvc.Helpers.Url;
+using Cqs.Mediator.Pattern.Mvc.Models.Security;
 using Cqs.Mediator.Pattern.Mvc.Models.SiteMap;
 using Cqs.Mediator.Pattern.Mvc.ViewModels.Customer;
 
@@ -12,18 +13,20 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUserRepository _repo;
-        private readonly ICommandHandler<MoveCustomerViewModel> _handler;
+        private readonly IUserRepository repo;
+        private readonly ICommandHandler<MoveCustomerViewModel> handler;
+        private readonly ISecurity security;
 
-        public HomeController(IUserRepository repo, ICommandHandler<MoveCustomerViewModel> handler)
+        public HomeController(IUserRepository repo, ICommandHandler<MoveCustomerViewModel> handler, ISecurity security)
         {
-            _repo = repo;
-            _handler = handler;
+            this.repo = repo;
+            this.handler = handler;
+            this.security = security;
         }
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Home Controller: Index: " + _repo.GetMe();
+            ViewBag.Message = "Home Controller: Index: " + repo.GetMe();
             return View();
         }
 
@@ -40,7 +43,7 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
                 CustomerName = "My Customer"
             };
 
-            _handler.Handle(command);
+            handler.Handle(command);
 
             return Content("done, new Id: " + command.CustomerId);
         }

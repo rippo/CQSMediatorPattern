@@ -4,7 +4,7 @@ namespace Cqs.Mediator.Pattern.Mvc.ViewModels.Customer
 {
     public class UpdateCustomerViewModel : ICommand
     {
-        public int CustomerId { get; internal set; }
 
+        public int CustomerId { get; internal set; }
     }
 }

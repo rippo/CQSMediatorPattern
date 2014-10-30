@@ -27,6 +27,8 @@ namespace Cqs.Mediator.Pattern.Mvc.Controllers
             ViewBag.Message2 = c2.CustomerId;
             ViewBag.Message3 = c3.CustomerId;
 
+            ViewBag.CurrentUserId = c2.CustomerId;
+
             return View();
         }
     }

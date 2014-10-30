@@ -4,6 +4,7 @@ using Cqs.Mediator.Pattern.Mvc.Handlers.Commands;
 using Cqs.Mediator.Pattern.Mvc.Handlers.Processors;
 using Cqs.Mediator.Pattern.Mvc.Handlers.Query;
 using Cqs.Mediator.Pattern.Mvc.Handlers.Repository;
+using Cqs.Mediator.Pattern.Mvc.Models.Security;
 using SimpleInjector.Extensions;
 using SimpleInjector.Integration.Web.Mvc;
 
@@ -29,7 +30,7 @@ namespace Cqs.Mediator.Pattern.Mvc
             //TODO register for many, or similar???
             Container.Register<ICustomerEnhanceProcessor, CustomerEnhanceProcessor>();
             Container.Register<IUserRepository, UserRepository>();
-
+            Container.Register<ISecurity, Security>();
 
             Container.Verify();
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(Container));

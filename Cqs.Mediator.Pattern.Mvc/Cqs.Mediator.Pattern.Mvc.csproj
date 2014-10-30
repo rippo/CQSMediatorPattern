@@ -143,6 +143,8 @@
     <Compile Include="Handlers\Commands\LogCommandHandlerDecorator.cs" />
     <Compile Include="Handlers\Processors\CustomerEnhanceProcessor.cs" />
     <Compile Include="Handlers\Processors\ICustomerEnhanceProcessor.cs" />
+    <Compile Include="Models\Security\Security.cs" />
+    <Compile Include="Models\Security\ISecurity.cs" />
     <Compile Include="ViewModels\Customer\DeleteCustomerViewModel.cs" />
     <Compile Include="Handlers\Commands\DeleteCustomerCommandHandler.cs" />
     <Compile Include="ViewModels\Customer\UpdateCustomerViewModel.cs" />
